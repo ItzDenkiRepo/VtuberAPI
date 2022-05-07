@@ -13,10 +13,49 @@ app.use(limiter)
 app.use(cors())
 // api key
 const apikey = [
-    "ZrB2SFzdvSlQ"
+    "ZrB2SFzdvSlQ",
+    "DjisTNQfWctm",
+    "x3GlnWAp9p9U",
+    "XINe14HQ267h",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
 ]
 app.get("/", (req, res) => {
-    res.send("https://github.com/HELLSNAKES/image-random-api")
+    res.send("https://github.com/ItzDenkiRepo/VtuberAPI")
 })
 app.get("/randomvtuber", (req, res) => {
     const key = req.query.apikey
@@ -25,8 +64,8 @@ app.get("/randomvtuber", (req, res) => {
     const imageList = fs.readdirSync("./public/randomvtuber")
     const randomImage = imageList[Math.floor(Math.random() * imageList.length)]
     result.url = `127.0.0.1:5000/randomvtuber/${randomImage}`
-    result.author = "HELLSNAKE , Sunglows Team"
-    result.source = "https://github.com/HELLSNAKES/image-random-api"
+    result.author = "ItzDenki , VtuberAPI"
+    result.source = "https://github.com/ItzDenkiRepo/VtuberAPI"
     res.header("Content-type", "application/json; charset=utf-8")
     if (apikey.includes(key)) {
         res.send(JSON.stringify(result, null, 2))
@@ -34,7 +73,7 @@ app.get("/randomvtuber", (req, res) => {
     } else {
         const result = {}
         result.code = 403
-        result.message = "Invalid API key, please contact admin to get key"
+        result.message = "API Key không phù hợp"
         res.send(JSON.stringify(result, null, 2))
     }
 })
