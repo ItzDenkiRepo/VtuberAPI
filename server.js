@@ -13,23 +13,6 @@ app.use(limiter)
 app.use(cors())
 // api key
 const apikey = [
-    "ZrB2SFzdvSlQ",
-    "DjisTNQfWctm",
-    "x3GlnWAp9p9U",
-    "XINe14HQ267h",
-    "DCaQ1P3aYoh1",
-    "surjhD1Ph94v",
-    "I0fYjVDyybaJ",
-    "Lwy4bCgNnWkl",
-    "mo6eYhgRen77",
-    "xXHhdOc1Mmgq",
-    "ToQ2XgHVXPNq",
-    "nG4xq79QhA2x",
-    "f3copk6G6tjp",
-    "cyKUMBDzTX17",
-    "i3wluRxpIkCq",
-    "VfqyrGoN6znc",
-    "Rf6x8bckLLvg"
 ]
 app.get("/", (req, res) => {
     res.send("https://github.com/ItzDenkiRepo/VtuberAPI")
